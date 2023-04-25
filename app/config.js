@@ -2,11 +2,17 @@
 
 module.exports = {
 
+    bitnami:
+    {
+        name: "MongoDB Service",
+        url: "mongodb://" + process.env.DATABASE_USER + ":" + process.env.DATABASE_PASSWORD + "@" + process.env.DATABASE_HOST + "/" + process.env.DATABASE_NAME,
+        port: process.env.DATABASE_PORT
+    }
+    
     mongolab:
     {
         name: "mongolab",
-        // url: "mongodb://BigCoder:BigCoder!@ds139817.mlab.com:39817/heroku_cnkn5vpn",
-        url: "mongodb://" + process.env.DATABASE_USER + ":" + process.env.DATABASE_PASSWORD + "@" + process.env.DATABASE_HOST + "/" + process.env.DATABASE_NAME,        
+        url: "mongodb://BigCoder:BigCoder!@ds139817.mlab.com:39817/heroku_cnkn5vpn",
         port: 27017
     },
 
